@@ -62,7 +62,8 @@ jobs:
       DB_URI: $${{ secrets.DB_URI }}
       NODE_ENV: production
       
-    needs: [deploy-homologacao]
+   needs: [deploy-homologacao]
+    environment: Cassaio-Dev
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
